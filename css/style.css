@@ -1,0 +1,108 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-top: 50px;
+    margin-bottom: 120px;       /* margin nya sama dengan tinggi footer nya(sama2 100px) supaya footernya dibawah*/
+}
+
+.navbar {
+    background-color: #1b3242;
+}
+
+.jumbotron {
+    background-image: url(../img/city.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -20px;               /*20px = gambarnya naik ke atas*/
+    overflow: hidden;                              /*kalo keluar dari jumbotron nya di umpetin pas di scroll tulisannya*/
+}
+
+
+.jumbotron img {
+    width: 230px;
+    border: 5px solid white;
+}
+
+.jumbotron img:hover {
+    box-shadow: 0 0 15px 10px rgba(42, 131, 247, 0.6);
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+.about p {
+    margin-top: 10px;
+}
+
+.pKiri {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+
+.pKanan {
+    opacity: 0;
+    transform: translate(50px, 0);
+    transition: 1s;
+}
+
+.pKiri.pMuncul, .pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+hr {
+    width: 250px;
+    border-top: 3px solid #999;
+}
+
+section {
+    min-height: 400px;
+}
+
+.portfolio {
+    height: 900px;
+    background-image: url(../img/bgporto.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transition: 0.5s;
+    transform: translate(0, -40px);         /*sumbu y(vertikal) = -40px*/
+}
+
+.portfolio .thumbnail.muncul {              /*class si '.muncul' dibikin di js jadi gak ada di index html dan dia harus nempel sama class aslinya(portfolio)*/
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.contact {
+    min-height: 800px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;                  /* supaya dia nempel dibawah(css position)*/
+    width: 100%;
+    height: 130px;
+    background-color: #333;
+    padding-top: 30px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+footer p i {
+    color: goldenrod;          /*karna icon itu font maka make 'color' */
+}
+
